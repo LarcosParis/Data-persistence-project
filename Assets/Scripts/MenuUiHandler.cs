@@ -33,6 +33,13 @@ public class MenuUiHandler : MonoBehaviour
         Debug.Log(NameInput.text);
     }
 
+    public void DeleteData()
+    {
+        NameManager.Instance.championName = null;
+        NameManager.Instance.highestScore = 0;
+        bestScoreText.text = "Best Score : " + NameManager.Instance.championName + " : " + NameManager.Instance.highestScore;
+    }
+
     public void Exit()
     {
         NameManager.Instance.SaveInfo();
